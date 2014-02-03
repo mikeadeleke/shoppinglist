@@ -1,3 +1,4 @@
+<!DOCTYPE html >
 <html>
 <head>
   <title>Shopping List</title>
@@ -8,17 +9,17 @@
 <body>  
   <div class="container">
     <div id="sidebar">
-      <img src="img/mike-adeleke-2.jpg" id="me">
+      <img src="img/mike-adeleke-2.jpg" id="me" alt="Mike Adeleke">
       <h3>Hi, I'm Mike Adeleke</h3>
-      <p>I'm a student at <a href="http://thinkful.com">Thinkful</a> and Founder of <a href="http://domiapp.co">Domi</a></p>
-      <img src="img/domiapp.png" id="startup">
+      <p>I'm a student at <a href="http://thinkful.com">Thinkful</a> and Founder at <a href="http://domiapp.co">Domi</a></p>
+      <img src="img/domiapp.png" id="startup" alt="Domi">
       <p>Find me on the interwebs...</p>
       <div class="social">
         <ul>
-          <li><a href="http://github.com/mikeadeleke"><img src="img/github.jpeg"></a></li> 
-          <li><a href="https://twitter.com/mikeadeleke"><img src="img/twitter.png"></a></li> 
-          <li><a href="http://linkedin.com/in/mikeadeleke"><img src="img/linkedin-1.jpeg"></a></li> 
-          <li><a href="http://blog.mikeadeleke.com"><img src="img/blog.jpg"></a></li> 
+          <li><a href="http://github.com/mikeadeleke"><img src="img/github.jpeg" alt="Github"></a></li> 
+          <li><a href="https://twitter.com/mikeadeleke"><img src="img/twitter.png" alt="Twitter"></a></li> 
+          <li><a href="http://linkedin.com/in/mikeadeleke"><img src="img/linkedin-1.jpeg" alt="LinkedIn"></a></li> 
+          <li><a href="http://blog.mikeadeleke.com"><img src="img/blog.jpg" alt="Blog"></a></li> 
         </ul>
       </div>
     </div>
@@ -27,11 +28,11 @@
       <div class="box">
         <form>
           <input type="text" id="input" >
-          <br><button id="button">Add One</button>
+          <p><input type="button" onclick="addText()" value="Add One" id="add"></p>
         </form>
-        <ul>
+        <ul id="todo-list">
           <li>Milk</li>
-          <li id="checked">Eggs</li>
+          <li>Eggs</li>
         </ul>
       </div>
     </div>
