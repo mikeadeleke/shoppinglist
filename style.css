@@ -134,9 +134,9 @@ table {
   color: white;
   font-size: 60px;
   font-family: Lucida Grande;
-  padding: 50px 0 20px 50px;
   text-align: center;
   line-height: 1.1em;
+  padding: 50px 0 20px 0;
 }
 
 #main li {
@@ -146,13 +146,14 @@ table {
   padding: 10px;
 }
 
-#main button {
+#add {
   color: #025488;
-  height: 30px;
-  width: 120px;
+  height: 40px;
+  width: 80px;
   font-family: Lucida Grande;
   font-size: 20px;
-  margin-top: 7px;
+  margin: 10px auto;
+  padding: 5px;
 }
 
 #input {
@@ -170,10 +171,16 @@ table {
 }
 
 .box {
-  text-align: center;
   border-radius: 5px;
   border: 5px solid white;
   padding: 10px;
+  height: 500px;
+}
+
+#todo-list {
+  color: white;
+  font-family: Lucida Grande;
+  font-size: 20px;
 }
 
 /*End of main section*/
