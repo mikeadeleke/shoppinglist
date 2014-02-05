@@ -5,13 +5,10 @@ function addText() {
     return;
   }
 
-  var checkbox = document.createElement("input").type = "checkbox";
-  var list_item = document.getElementById("todo-list");
   var addItem = document.createElement("li");
   var processItem = document.createTextNode(input);
   addItem.appendChild(processItem);
   document.getElementById("todo-list").appendChild(addItem);
-  addItem.insertBefore(checkbox, list_item);
 }
 
 function checkItem() {
