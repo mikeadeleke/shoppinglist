@@ -1,17 +1,24 @@
 function addText() {
-  var input = document.getElementById('input').value;
-  if (!input || 0 === input.length || /^\s*$/.test(input)) {
+  var input = document.getElementById('input');
+  
+  var itemText = input.value;
+
+  if (!itemText || 0 === itemText.length || /^\s*$/.test(itemText)) {
     alert("Come on, please enter some valid text!");
-    return;
+    return false;
   }
+  
 
-  var addItem = document.createElement("li");
-  var processItem = document.createTextNode(input);
-  addItem.appendChild(processItem);
-  document.getElementById("todo-list").appendChild(addItem);
-}
+  var listItem = document.createElement("li");
+  listItem.innerText = itemText;
 
-function checkItem() {
-  var listItem = document.getElementById("todo-list");
+  var list = document.getElementById("todo-list");
+  list.appendChild(listItem)
 
+  var checkItem = listItem;
+  checkItem.onclick = function() {
+    checkItem.setAttribute("id", "checked");
+  };
+
+  input.value = "";
 }
