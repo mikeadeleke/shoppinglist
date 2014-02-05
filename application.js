@@ -1,18 +1,24 @@
 function addText() {
-  var input = document.getElementById('input').value;
-  if (input !== "string") {
+  var input = document.getElementById('input');
+  
+  var itemText = input.value;
+
+  if (!itemText || 0 === itemText.length || /^\s*$/.test(itemText)) {
     alert("Come on, please enter some valid text!");
-
+    return false;
   }
+  
 
-  var addItem = document.createElement("li");
-  var css = "{type: checkbox}";
-  var processItem = document.createTextNode(input);
-  addItem.appendChild(processItem);
-  document.getElementById("todo-list").appendChild(addItem).appendChild(document.cssText(css));
+  var listItem = document.createElement("li");
+  listItem.innerText = itemText;
+
+  var list = document.getElementById("todo-list");
+  list.appendChild(listItem)
+
+  var checkItem = listItem;
+  checkItem.onclick = function() {
+    checkItem.setAttribute("id", "checked");
+  };
+
+  input.value = "";
 }
-
-
-
-
-
